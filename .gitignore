@@ -6,8 +6,8 @@
 .pnp.js
 
 # editor
-.idea
-.vscode
+/.idea/
+/.vscode/
 
 # testing
 /coverage
