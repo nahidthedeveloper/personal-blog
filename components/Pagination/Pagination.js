@@ -11,10 +11,9 @@ const Pagination = () => {
                     <span className={'ml-2'}>Previous</span>
                 </Link>
 
-                <div className={'flex gap-2'}>
+                <div className={'flex flex-wrap gap-2'}>
                     <Link href={''} className={'bg-black text-white dark:bg-white dark:text-black px-2 py-1 rounded'}>1</Link>
                     <Link href={''} className={' px-2 py-1'}>2</Link>
-
                 </div>
 
                 <Link href={''} className={'flex items-center'}>
