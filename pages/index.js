@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import CardSmallHorizontal from "@/components/Card/CardSmallHorizontal";
-
 export default function Home() {
 
 

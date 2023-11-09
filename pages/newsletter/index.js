@@ -2,8 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import CardSmallVertical from '@/components/Card/CardSmallVertical'
-import CardMid from "@/components/Card/CardMid";
-import CardSmallHorizontal from "@/components/Card/CardSmallHorizontal";
 
 const Newsletter = () => {
     const cardData = [
@@ -17,7 +15,7 @@ const Newsletter = () => {
             three: 'Presentation',
         },
         {
-            image: 'https://knotch.com/contenteq/wp-content/uploads/sites/3/2023/03/Image-8.png',
+            image: 'https://s3-alpha-sig.figma.com/img/908f/6e6d/adefff9c6fad99774e0aa7808b2270ab?Expires=1700438400&Signature=nHb05rc5LIDgcxlFRNy~3Fu~P5GXbAJpkFgbgDG0b8mm2T8hjE2ddymTWTUI147SGWeo2BBIEuLU1ADQi0XAho4KEyqDDGe~JHfmxwRq-h-5Qz1HDXuagcUq88fkeRbba1eQqZUF7iy7Zk7cvIUDzrQXaUORkAZavrurEDFIfavZT1h5Kkm~IQEwwcakceXZ78IPCCkR-KuCZDTwSXJEiIgOG0UfZprWzWglO0rBO6OxwaCPFG3e2qRHtBF26p~hqDlaH8OxSNqsMZrdQ26-3mEJt53Rz4KYJVOMJgblNkjh3jMj-8-Gha7pzTwq5VXmSK06i9iPwbTVnuMSTOHCRw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             date: 'Sunday , 2 Jan 2023',
             link: '#',
             title: 'PM mental models',

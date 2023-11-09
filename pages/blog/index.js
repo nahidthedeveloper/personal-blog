@@ -19,7 +19,7 @@ const Blogs = () => {
             three: 'Presentation',
         },
         {
-            image: 'https://knotch.com/contenteq/wp-content/uploads/sites/3/2023/03/Image-8.png',
+            image: 'https://s3-alpha-sig.figma.com/img/0095/33dd/b18880647940253fa905f2a8d6a3a95e?Expires=1700438400&Signature=CXZR511l0n-8WalycY6bWNNHiGeTJhcBaGsowlexZzHUpLwBKx-Sk6ECqbJ75Zq8LL6HNcTUVDuJD2ktwUQzmch~es9ZAiyiaOefnsupsHSDXStKYncXIvNH~vDVR5ZE3Bsj4EO1-y3M37CxyyW7R~KA1YcHubjjGdx3PHmhLnpWexhbVJRbyt33GjuCLMt9zs-X~P0v1Lq8CApUCUY5IgVDiqZ16xUC95CnPDPLEQLZ5TXO01dx9EmfHH9PvU6qEoPTjoEdo4rW8G-Rpr92~CID1Lq4rWQS7pn8RFxi5d0UMYhoNKFILKNAliccM68ZLZOnyiU4XmKYjjBGIEzrYg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
             date: '',
             title: 'Bring of User Experience Design to Policy Making, How to Impact Society',
             description:
