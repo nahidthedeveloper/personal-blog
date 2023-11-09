@@ -1,27 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
 
-function Themes() {
-    // const themeFromStorage =
-    //   typeof window !== 'undefined'
-    //     ? localStorage.getItem('theme')
-    //       ? localStorage.getItem('theme')
-    //       : 'light'
-    //     : 'light'
-
-    const [theme, setTheme] = useState('light')
-
-    useEffect(() => {
-        switch (theme) {
-            case 'light':
-                localStorage.setItem('theme', 'light')
-                document.documentElement.classList.remove('dark')
-                break
-            default:
-                localStorage.setItem('theme', 'dark')
-                document.documentElement.classList.add('dark')
-        }
-    }, [theme])
+function Themes({ setTheme, theme }) {
 
     const handleTheme = (mode) => {
         setTheme(mode)

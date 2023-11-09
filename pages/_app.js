@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
     return (
         <>
-            <div className={'px-5 lg:px-[212px]'}>
+            <div className={'max-w-[1216px] w-full m-auto'}>
                 <Navbar />
                 <Component {...pageProps} />
                 <Footer />

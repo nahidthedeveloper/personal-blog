@@ -1,34 +1,78 @@
 import React from 'react'
+import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
 
-const CardSmallHorizontal = () => {
+const CardSmallHorizontal = (props) => {
+    const { image, date, title, link, description, one, two, three, four } = props.data
     return (
         <div className={'grid col-span-1 md:col-span-2 lg:col-span-1'}>
-           <div className={'md:flex grid gap-7'}>
-               <img
-                 src='https://img.freepik.com/premium-photo/programmer-architectural-engineer-computer-desk-workplace-with-computer-monitor_67155-23182.jpg?w=1380'
-                 alt='card'
-                 className={'h-[220px] w-full overflow-hidden object-cover'}
-               />
+            <div className={'grid gap-6 md:grid-cols-2'}>
+                <Link href={''} className={'overflow-hidden w-full h-[200px] block'}>
+                    <img src={image} alt='card' className={'object-cover h-full w-full'} />
+                </Link>
 
-               <div className={'flex flex-col gap-3'}>
-                   <h3 className={'text-sm font-bold text-purple-600'}>Olivia Rhye • 1 Jan 2023</h3>
-                   <h1 className={'text-2xl'}>UX review presentations</h1>
-                   <h2 className={'text-base leading-4 text-[#667085]'}>
-                       How do you create compelling presentations that wow your colleagues and impress your managers?
-                   </h2>
-                   <div className={'flex gap-2 mt-3'}>
-                    <span className={'bg-[#F9F5FF] text-sm py-0.5 px-3 rounded-2xl leading-5 text-purple-600'}>
-                        Design
-                    </span>
-                       <span className={'bg-[#EEF4FF] text-sm py-0.5 px-3 rounded-2xl leading-5 text-purple-600'}>
-                        Research
-                    </span>
-                       <span className={'bg-[#FDF2FA] text-sm py-0.5 px-3 rounded-2xl leading-5 text-[#667085]'}>
-                        Presentation
-                    </span>
-                   </div>
-               </div>
-           </div>
+                <div>
+                    {date ? <h3 className={'text-sm font-bold text-purple-600 mb-3'}>{date}</h3> : ''}
+
+                    <Link href={''} className={'flex justify-between mb-2'}>
+                        <h1 className={'text-2xl leading-8 font-[600] line-clamp-2'}>{title}</h1>
+                        {link ? (
+                            <div className={'w-6'}>
+                                <ArrowUpRightIcon className={'h-6 w-6'} />
+                            </div>
+                        ) : (
+                            ''
+                        )}
+                    </Link>
+                    <p className={'text-base leading-6 text-[#667085] mb-6 line-clamp-3'}>{description}</p>
+                    <div className={'flex flex-wrap gap-2'}>
+                        {one ? (
+                            <span
+                                className={
+                                    'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'
+                                }
+                            >
+                                {' '}
+                                {one}{' '}
+                            </span>
+                        ) : (
+                            ''
+                        )}
+                        {two ? (
+                            <span
+                                className={
+                                    'bg-[#EEF4FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'
+                                }
+                            >
+                                {' '}
+                                {two}{' '}
+                            </span>
+                        ) : (
+                            ''
+                        )}
+                        {three ? (
+                            <span
+                                className={
+                                    'bg-[#FDF2FA] text-sm font-[500] py-0.5 px-3 rounded-2xl text-[#667085] h-[26px]'
+                                }
+                            >
+                                {' '}
+                                {three}{' '}
+                            </span>
+                        ) : (
+                            ''
+                        )}
+                        {four ? (
+                            <span className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600'}>
+                                {' '}
+                                {four}{' '}
+                            </span>
+                        ) : (
+                            ''
+                        )}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
