@@ -23,7 +23,7 @@ const Navbar = () => {
             </button>
 
             {/*big screen*/}
-            <nav className={'py-[10px] my-[30px] px-8 lg:px-0 flex justify-between'}>
+            <nav className={'my-[30px] lg:px-0 flex justify-between'}>
                 <Link href={'/'} className={'no-underline text-2xl font-bold'}>
                     Logo
                 </Link>

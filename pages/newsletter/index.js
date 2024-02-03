@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import CardSmallVertical from '@/components/Card/CardSmallVertical'
+import CardVerticalOne from '@/components/Card/CardVerticalOne'
 
 const Newsletter = () => {
     const cardData = [
@@ -15,7 +15,7 @@ const Newsletter = () => {
             three: 'Presentation',
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/908f/6e6d/adefff9c6fad99774e0aa7808b2270ab?Expires=1700438400&Signature=nHb05rc5LIDgcxlFRNy~3Fu~P5GXbAJpkFgbgDG0b8mm2T8hjE2ddymTWTUI147SGWeo2BBIEuLU1ADQi0XAho4KEyqDDGe~JHfmxwRq-h-5Qz1HDXuagcUq88fkeRbba1eQqZUF7iy7Zk7cvIUDzrQXaUORkAZavrurEDFIfavZT1h5Kkm~IQEwwcakceXZ78IPCCkR-KuCZDTwSXJEiIgOG0UfZprWzWglO0rBO6OxwaCPFG3e2qRHtBF26p~hqDlaH8OxSNqsMZrdQ26-3mEJt53Rz4KYJVOMJgblNkjh3jMj-8-Gha7pzTwq5VXmSK06i9iPwbTVnuMSTOHCRw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            image: 'https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/16:9/w_1920,c_limit/IMG%20Worlds%20of%20Adventure%20-%201.jpg',
             date: 'Sunday , 2 Jan 2023',
             link: '#',
             title: 'PM mental models',
@@ -63,12 +63,12 @@ const Newsletter = () => {
                                     className={
                                         'text-base py-3 pl-4 pr-[14px] w-[165px] md:w-[360px] bg-gray-100 dark:text-black rounded-lg mr-4'
                                     }
-                                    type='email'
-                                    placeholder='Enter your email'
+                                    type="email"
+                                    placeholder="Enter your email"
                                 />
                                 <button
-                                    className='bg-blue-500 hover:bg-blue-700 text-white text-base font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline'
-                                    type='button'
+                                    className="bg-blue-500 hover:bg-blue-700 text-white text-base font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline"
+                                    type="button"
                                 >
                                     Subscribe
                                 </button>
@@ -85,11 +85,13 @@ const Newsletter = () => {
 
                 <section className={'mt-32'}>
                     <h2 className={'font-bold text-2xl mb-10'}>All blog posts</h2>
+
                     <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-8 mb-20'}>
                         {cardData.map((date, index) => (
-                            <CardSmallVertical key={index} data={date} />
+                            <CardVerticalOne key={index} data={date} />
                         ))}
                     </div>
+
                 </section>
             </div>
         </>

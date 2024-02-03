@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import CardSmallVertical from '@/components/Card/CardSmallVertical'
+import CardVerticalOne from '@/components/Card/CardVerticalOne'
 import Link from 'next/link'
 
 const SingleBlog = () => {
@@ -72,7 +72,7 @@ const SingleBlog = () => {
                 <div className={'grid col-span-1 md:col-span-2 lg:col-span-1 gap-8'}>
                     <h2 className={'font-bold text-2xl'}>Recent blog posts</h2>
                     {cardData.map((data, index) => (
-                        <CardSmallVertical key={index} data={data} />
+                        <CardVerticalOne key={index} data={data} />
                     ))}
                 </div>
                 <div className={'col-span-1 md:col-span-3 lg:col-span-2'}>

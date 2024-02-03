@@ -25,12 +25,12 @@ const About = () => {
             title: 'Created wireframes and prototypes for a mobile banking app, leading to a 20% increase in app usage',
         },
         {
-            title: "Conducted user research and usability testing to inform the redesign of a healthcare provider's website, resulting in a 15% increase in website traffic",
+            title: 'Conducted user research and usability testing to inform the redesign of a healthcare provider\'s website, resulting in a 15% increase in website traffic',
         },
     ]
 
     const education = [
-        { title: "Bachelor's degree in Graphic Design" },
+        { title: 'Bachelor\'s degree in Graphic Design' },
         { title: 'Certified User Experience Designer (CUED)' },
     ]
 
@@ -42,19 +42,15 @@ const About = () => {
 
             <div>
                 <h1
-                    className={
-                        'mt-10 text-[72px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 md:text-[150.8px] lg:text-[224px] dark:border-white'
-                    }
+                    className="mt-10 text-[72px] md:text-[150.8px] lg:text-[224px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 dark:border-white"
                 >
-                    John Doe
+                    Nahid
                 </h1>
 
                 <div className={'px-8 lg:px-0'}>
                     <div className={'mt-16 overflow-hidden'}>
                         <img
-                            src={
-                                'https://s3-alpha-sig.figma.com/img/5caa/9ba9/83f505b4aaa7b5be1a87f9ca43a8e9f9?Expires=1700438400&Signature=U6832RZhLvuGhFtHr7dGm5t37IZ8CLmr1FfjsmzBJ6hJbKckCFlC0n9cxECAyLl5o8ObenVcvFDA8H~HX8gZyIRYTJUCBfWaiJ1GK39b2XxU6BZkY5tMg1exkWtFFGcJOIriTqrMwUDFRWcB8TZtrk2bWLD2ECawCuf1qY~eUKJ5Ie7Smh~VJVzeRM5SgLMB6~7MPvJGE7~uJ1VVcQPAzs~awtvAGXv0OzmD0yMjtcOY1AmeLJIHAf2LE6RYmoc0K4cJX3985JqPv4HjwCgyTfxUqZdBM8mm6xt4GZlJMtDSHxGE3ezqgI2Bn-dwHKg-d~xQBQZPlAXEz~PP-cDBmw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
-                            }
+                            src="https://scontent.fjsr14-1.fna.fbcdn.net/v/t39.30808-6/362301815_1395788694315125_1512437240239899153_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeGEwBOaGVBWg64qvAua3iN7SbgEqEZJqHZJuASoRkmodmGFVPfL9jhFQlhV1jk4ky-uc5vDGZfjYX7A8Inoi2fT&_nc_ohc=a57Vh4p5WH4AX-A6QpC&_nc_ht=scontent.fjsr14-1.fna&oh=00_AfB8lAY-9v1_EybgiVgxd-NOkIe5qJVwrA2ujhOlHIHOGw&oe=65C438D0"
                             alt={'image'}
                             className={'h-[300px] md:h-[556px] w-full object-cover'}
                         />

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react'
 import Pagination from '@/components/Pagination/Pagination'
 import Head from 'next/head'
-import CardSmallHorizontal from '@/components/Card/CardSmallHorizontal'
-import CardSmallVertical from '@/components/Card/CardSmallVertical'
-import CardScreenHorizontal from '@/components/Card/CardScreenHorizontal'
+import CardHorizontalOne from '@/components/Card/CardHorizontalOne'
+import CardVerticalOne from '@/components/Card/CardVerticalOne'
+import CardHorizontalTwo from '@/components/Card/CardHorizontalTwo'
 
 const Blogs = () => {
     const cardData = [
         {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             title: 'User Experience Design Dashboard Hotel Management',
             description:
@@ -18,7 +18,7 @@ const Blogs = () => {
             three: 'Presentation',
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/0095/33dd/b18880647940253fa905f2a8d6a3a95e?Expires=1700438400&Signature=CXZR511l0n-8WalycY6bWNNHiGeTJhcBaGsowlexZzHUpLwBKx-Sk6ECqbJ75Zq8LL6HNcTUVDuJD2ktwUQzmch~es9ZAiyiaOefnsupsHSDXStKYncXIvNH~vDVR5ZE3Bsj4EO1-y3M37CxyyW7R~KA1YcHubjjGdx3PHmhLnpWexhbVJRbyt33GjuCLMt9zs-X~P0v1Lq8CApUCUY5IgVDiqZ16xUC95CnPDPLEQLZ5TXO01dx9EmfHH9PvU6qEoPTjoEdo4rW8G-Rpr92~CID1Lq4rWQS7pn8RFxi5d0UMYhoNKFILKNAliccM68ZLZOnyiU4XmKYjjBGIEzrYg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             title: 'Bring of User Experience Design to Policy Making, How to Impact Society',
             description:
@@ -28,7 +28,7 @@ const Blogs = () => {
             three: 'Presentation',
         },
         {
-            image: 'https://intellipaat.com/blog/wp-content/uploads/2023/05/What-is-a-Wireframe-800x270.png',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             link: '#',
             title: 'UX review presentatiBringing Design Process to Teams, How to Solve User Problems with Data & Inclusive Collaboration Designons',
@@ -38,7 +38,7 @@ const Blogs = () => {
             two: 'Research',
         },
         {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             title: 'Icon Package of Slin Icon',
             description:
@@ -47,7 +47,7 @@ const Blogs = () => {
             two: 'Branding',
         },
         {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             title: 'UX review presentations',
             description:
@@ -56,7 +56,7 @@ const Blogs = () => {
             two: 'Research',
         },
         {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
+            image: 'https://media.istockphoto.com/id/1496615469/photo/serene-latin-woman-enjoy-sunset-with-gratitude.jpg?s=2048x2048&w=is&k=20&c=f2BOEDlrq_Z90_MAqN0iFt7c6ilF2ci4bSSwaM-JpcU=',
             date: '',
             title: 'UX review presentations',
             description:
@@ -74,61 +74,49 @@ const Blogs = () => {
             </Head>
 
             <div>
-                <h1
-                    className={
-                        'mt-10 text-[72px] md:text-[160.8px] lg:text-[220px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 dark:border-white'
-                    }
-                >
+                <h1 className="mt-10 text-[72px] md:text-[160.8px] lg:text-[220px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 dark:border-white">
                     THE BLOG
                 </h1>
 
                 <div className={'px-8 lg:px-0'}>
                     <section className={'my-12'}>
                         <h2 className={'font-bold text-2xl mb-8'}>Recent blog posts</h2>
-                        {/*<Masonry*/}
-                        {/*    breakpointCols={{*/}
-                        {/*        700: 2,*/}
-                        {/*        500: 1,*/}
-                        {/*    }}*/}
-                        {/*    className='my-masonry-grid'*/}
-                        {/*    columnClassName='my-masonry-grid_column'*/}
-                        {/*>*/}
 
-                            <div className={'grid md:grid-cols-2 gap-8'}>
-                                {cardData.map((el, index) => {
-                                    const arrMod = index % 6
-                                    if (arrMod === 0) {
-                                        return (
-                                          <>
-                                              <CardSmallVertical key={index} data={el} />
-                                          </>
-                                        )
-                                    } else if (arrMod === 1) {
-                                        return (
-                                          <>
-                                            <div className={'grid gap-8 md:col-span-2 lg:col-span-1'}>
-                                                <CardSmallHorizontal key={index} data={el} />
-                                                <CardSmallHorizontal key={index} data={el} />
+                        <div className={'grid grid-cols-2 gap-8'}>
+                            {cardData.map((el, index) => {
+                                const arrMod = index % 6
+                                if (arrMod === 0) {
+                                    return (
+                                        <div className='col-span-2 md:col-span-1'>
+                                            <CardVerticalOne key={index} data={el} />
+                                        </div>
+                                    )
+                                } else if (arrMod === 1) {
+                                    return (
+                                        <>
+                                            <div className="grid gap-10 col-span-2 md:col-span-1">
+                                                <CardHorizontalOne key={index} data={el} />
+                                                <CardHorizontalOne key={index} data={el} />
                                             </div>
-                                          </>
-                                        )
-                                    } else if (arrMod === 2) {
-                                        return (
-                                          <>
-                                              <CardScreenHorizontal key={index} data={el} />
-                                          </>
-                                        )
-                                    }
-                                })}
-                            </div>
-                        {/*</Masonry>*/}
+                                        </>
+                                    )
+                                } else if (arrMod === 2) {
+                                    return (
+                                        <div className="col-span-2">
+                                            <CardHorizontalTwo key={index} data={el} />
+                                        </div>
+                                    )
+                                }
+                            })}
+                        </div>
+
                     </section>
 
                     <section className={'my-12'}>
                         <h2 className={'font-bold text-2xl my-16'}>All blog posts</h2>
                         <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'}>
                             {cardData.map((data, index) => (
-                                <CardSmallVertical key={index} data={data} />
+                                <CardVerticalOne key={index} data={data} />
                             ))}
                         </div>
                     </section>
