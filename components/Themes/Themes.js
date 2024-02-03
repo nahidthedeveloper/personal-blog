@@ -1,19 +1,32 @@
-import React from 'react'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid'
+import React, { useEffect, useState } from 'react'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
-function Themes({ setTheme, theme }) {
+function Themes() {
+    const [mounted, setMounted] = useState(false)
+    const { theme, setTheme } = useTheme()
 
-    const handleTheme = (mode) => {
-        setTheme(mode)
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    if (!mounted) {
+        return null
     }
 
     return (
-        <button
-            onClick={() => handleTheme(theme === 'light' ? 'dark' : 'light')}
-            className={'text-white px-3 py-1 bg-indigo-500 hover:bg-indigo-600 rounded-xl flex items-center'}
-        >
-            {theme === 'light' ? <SunIcon className='h-6 w-6' /> : <MoonIcon className='h-6 w-6' />}
-        </button>
+        <div>
+            <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="py-1 px-2 rounded-3xl"
+            >
+                {mounted && theme === 'light' ? (
+                    <Sun className="text-black dark:text-white" />
+                ) : (
+                    <Moon className="text-black dark:text-white" />
+                )}
+            </button>
+        </div>
     )
 }
 

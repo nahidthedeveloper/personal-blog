@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react'
 import Pagination from '@/components/Pagination/Pagination'
 import Head from 'next/head'
-import Masonry from 'react-masonry-css'
 import CardSmallHorizontal from '@/components/Card/CardSmallHorizontal'
 import CardSmallVertical from '@/components/Card/CardSmallVertical'
 import CardScreenHorizontal from '@/components/Card/CardScreenHorizontal'
@@ -77,7 +76,7 @@ const Blogs = () => {
             <div>
                 <h1
                     className={
-                        'mt-10 text-[72px] md:text-[160.8px] lg:text-[243px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 dark:border-white'
+                        'mt-10 text-[72px] md:text-[155px] lg:text-[220px] text-center font-bold border-y-2 border-black border-opacity-20 mb-7 dark:border-white'
                     }
                 >
                     THE BLOG
@@ -86,43 +85,33 @@ const Blogs = () => {
                 <div className={'px-8 lg:px-0'}>
                     <section className={'my-12'}>
                         <h2 className={'font-bold text-2xl mb-8'}>Recent blog posts</h2>
-                        {/*<Masonry*/}
-                        {/*    breakpointCols={{*/}
-                        {/*        700: 2,*/}
-                        {/*        500: 1,*/}
-                        {/*    }}*/}
-                        {/*    className='my-masonry-grid'*/}
-                        {/*    columnClassName='my-masonry-grid_column'*/}
-                        {/*>*/}
-
-                            <div className={'grid md:grid-cols-2 gap-8'}>
-                                {cardData.map((el, index) => {
-                                    const arrMod = index % 6
-                                    if (arrMod === 0) {
-                                        return (
-                                          <>
-                                              <CardSmallVertical key={index} data={el} />
-                                          </>
-                                        )
-                                    } else if (arrMod === 1) {
-                                        return (
-                                          <>
-                                            <div className={'grid gap-8 md:col-span-2 lg:col-span-1'}>
-                                                <CardSmallHorizontal key={index} data={el} />
-                                                <CardSmallHorizontal key={index} data={el} />
+                        <div className={'grid md:grid-cols-2 gap-8'}>
+                            {cardData.map((el, index) => {
+                                const arrMod = index % 6
+                                if (arrMod === 0) {
+                                    return (
+                                        <>
+                                            <CardSmallVertical key={index} data={el} />
+                                        </>
+                                    )
+                                } else if (arrMod === 1) {
+                                    return (
+                                        <>
+                                            <div className={'grid gap-8 md:col-span-2 lg:col-span-1'} key={index}>
+                                                <CardSmallHorizontal data={el} />
+                                                <CardSmallHorizontal data={el} />
                                             </div>
-                                          </>
-                                        )
-                                    } else if (arrMod === 2) {
-                                        return (
-                                          <>
-                                              <CardScreenHorizontal key={index} data={el} />
-                                          </>
-                                        )
-                                    }
-                                })}
-                            </div>
-                        {/*</Masonry>*/}
+                                        </>
+                                    )
+                                } else if (arrMod === 2) {
+                                    return (
+                                        <>
+                                            <CardScreenHorizontal key={index} data={el} />
+                                        </>
+                                    )
+                                }
+                            })}
+                        </div>
                     </section>
 
                     <section className={'my-12'}>
