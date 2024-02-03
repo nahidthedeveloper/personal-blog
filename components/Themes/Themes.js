@@ -16,14 +16,11 @@ function Themes() {
 
     return (
         <div>
-            <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="py-1 px-2 rounded-3xl"
-            >
+            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className='py-1 px-2 rounded-3xl'>
                 {mounted && theme === 'light' ? (
-                    <Sun className="text-black dark:text-white" />
+                    <Sun className='text-black dark:text-white' />
                 ) : (
-                    <Moon className="text-black dark:text-white" />
+                    <Moon className='text-black dark:text-white' />
                 )}
             </button>
         </div>

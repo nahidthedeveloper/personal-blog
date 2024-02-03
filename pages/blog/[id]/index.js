@@ -84,8 +84,8 @@ const SingleBlog = () => {
 
                         <div className={'h-[426px] overflow-hidden mb-8'}>
                             <img
-                                src="https://s3-alpha-sig.figma.com/img/f074/6a8e/91047747031d3bda636eac41f4235b6d?Expires=1700438400&Signature=qIZKEwCwtAQ3WK9MF5zTFz0AlZqu8eL6MBOsch6rurW0uFBQx7YFD6kOj5qtqmGy~OI6xd9LGijCQ8huHcNu2lfU-5e53-fwxpiZI3wxkBTqgtd~tBMe3WauhEG6Y2DwEamzCIBdrxxOd~4W~AejhttE5Jfe4bv~EwR5WBrosIqScLEYfM86ndJhCzvoYDEBrEhCPpwoyg83hsTtnr1LQ9gr3BO~Dz5mhpaNPtBr0IiyceOgsGUz~zMfdFcBK~0QtQo~q9yjP3o5-IKlcxud0Q2BvTP2LbtaspOSPWnEM--rVfWHauqvqVtz-7zRYusfdUmwb-all5M4qQp2yGcrzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                                alt="photo"
+                                src='https://s3-alpha-sig.figma.com/img/f074/6a8e/91047747031d3bda636eac41f4235b6d?Expires=1700438400&Signature=qIZKEwCwtAQ3WK9MF5zTFz0AlZqu8eL6MBOsch6rurW0uFBQx7YFD6kOj5qtqmGy~OI6xd9LGijCQ8huHcNu2lfU-5e53-fwxpiZI3wxkBTqgtd~tBMe3WauhEG6Y2DwEamzCIBdrxxOd~4W~AejhttE5Jfe4bv~EwR5WBrosIqScLEYfM86ndJhCzvoYDEBrEhCPpwoyg83hsTtnr1LQ9gr3BO~Dz5mhpaNPtBr0IiyceOgsGUz~zMfdFcBK~0QtQo~q9yjP3o5-IKlcxud0Q2BvTP2LbtaspOSPWnEM--rVfWHauqvqVtz-7zRYusfdUmwb-all5M4qQp2yGcrzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+                                alt='photo'
                             />
                         </div>
 
@@ -117,8 +117,7 @@ const SingleBlog = () => {
                                     }
                                 >
                                     Subscribe to learn about new product features, the latest in technology, solutions,
-                                    and
-                                    updates
+                                    and updates
                                 </h2>
                             </div>
 
@@ -128,19 +127,21 @@ const SingleBlog = () => {
                                         className={
                                             'text-base py-3 pl-4 pr-[14px] w-[165px] md:w-[360px] bg-gray-100 dark:text-black rounded-lg mr-4'
                                         }
-                                        type="email"
-                                        placeholder="Enter your email"
+                                        type='email'
+                                        placeholder='Enter your email'
                                     />
                                     <button
-                                        className="bg-blue-500 hover:bg-blue-700 text-white text-base font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline"
-                                        type="button"
+                                        className='bg-blue-500 hover:bg-blue-700 text-white text-base font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline'
+                                        type='button'
                                     >
                                         Subscribe
                                     </button>
                                     <h5 className={'text-sm mt-2'}>
                                         We care about your data in our{' '}
-                                        <Link href={''}
-                                              className={'border-b border-b-black dark:border-b-white pb-0.5'}>
+                                        <Link
+                                            href={''}
+                                            className={'border-b border-b-black dark:border-b-white pb-0.5'}
+                                        >
                                             privacy policy
                                         </Link>
                                     </h5>
