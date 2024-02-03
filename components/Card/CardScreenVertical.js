@@ -25,7 +25,9 @@ const CardScreenVertical = (props) => {
             <p className={'text-base leading-6 text-[#667085] mb-6'}>{description}</p>
             <div className={'flex flex-wrap gap-2'}>
                 {one ? (
-                    <span className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}>
+                    <span
+                        className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}
+                    >
                         {' '}
                         {one}{' '}
                     </span>
@@ -33,7 +35,9 @@ const CardScreenVertical = (props) => {
                     ''
                 )}
                 {two ? (
-                    <span className={'bg-[#EEF4FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}>
+                    <span
+                        className={'bg-[#EEF4FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}
+                    >
                         {' '}
                         {two}{' '}
                     </span>

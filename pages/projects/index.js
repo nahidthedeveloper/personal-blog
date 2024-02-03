@@ -69,8 +69,6 @@ const Projects = () => {
                 <title>Project | Personal Blog</title>
             </Head>
 
-
-
             <div>
                 <h1
                     className={
@@ -84,11 +82,11 @@ const Projects = () => {
                         <h2 className={'font-bold text-2xl mb-8'}>List Project</h2>
                         <div className={'grid grid-cols-1 md:grid-cols-2 gap-8'}>
                             {cardData.map((data, index) =>
-                              index !== 2 ? (
-                                <CardMid key={index} data={data} />
-                              ) : (
-                                <CardScreenVertical key={index} data={data} />
-                              )
+                                index !== 2 ? (
+                                    <CardMid key={index} data={data} />
+                                ) : (
+                                    <CardScreenVertical key={index} data={data} />
+                                )
                             )}
                         </div>
                     </section>

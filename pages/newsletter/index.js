@@ -87,7 +87,7 @@ const Newsletter = () => {
                     <h2 className={'font-bold text-2xl mb-10'}>All blog posts</h2>
                     <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-8 mb-20'}>
                         {cardData.map((date, index) => (
-                          <CardSmallVertical key={index} data={date} />
+                            <CardSmallVertical key={index} data={date} />
                         ))}
                     </div>
                 </section>

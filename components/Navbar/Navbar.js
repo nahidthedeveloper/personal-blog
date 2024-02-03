@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Themes from '@/components/Themes/Themes'
 import { useRouter } from 'next/router'
 
-
 const Navbar = () => {
     const [toggle, setToggle] = useState(false)
     const router = useRouter()
@@ -30,11 +29,15 @@ const Navbar = () => {
                 </Link>
 
                 <div className={'hidden md:block'}>
-                    <ul className="flex items-center">
+                    <ul className='flex items-center'>
                         {items.map(({ title, path }, index) => (
                             <li key={index}>
-                                <Link href={path}
-                                      className={`${router.pathname === path && 'border-b-2 border-black dark:border-white'} pb-0.5 mr-8`}>
+                                <Link
+                                    href={path}
+                                    className={`${
+                                        router.pathname === path && 'border-b-2 border-black dark:border-white'
+                                    } pb-0.5 mr-8`}
+                                >
                                     {title}
                                 </Link>
                             </li>
@@ -48,25 +51,37 @@ const Navbar = () => {
 
             {/*small screen*/}
             <nav
-                className={`${toggle ? 'block' : 'hidden'} bg-white text-black dark:bg-gray-900 dark:text-white w-full h-screen fixed top-0`}>
-                <div className="h-screen flex items-center justify-center gap-6">
+                className={`${
+                    toggle ? 'block' : 'hidden'
+                } bg-white text-black dark:bg-gray-900 dark:text-white w-full h-screen fixed top-0`}
+            >
+                <div className='h-screen flex items-center justify-center gap-6'>
                     <ul className={'text-center'}>
                         <li className={'mb-[54px]'}>
-                            <Link href={'/'}
-                                  className={'no-underline text-2xl font-bold'}
-                                  onClick={() => {
-                                      toggle && setToggle(false)
-                                  }}
+                            <Link
+                                href={'/'}
+                                className={'no-underline text-2xl font-bold'}
+                                onClick={() => {
+                                    toggle && setToggle(false)
+                                }}
                             >
                                 Logo
                             </Link>
                         </li>
                         {items.map(({ title, path }, index) => (
-                            <li key={index} className="mb-4" onClick={() => {
-                                toggle && setToggle(false)
-                            }}>
-                                <Link href={path}
-                                      className={`${router.pathname === path && 'border-b-2 border-black dark:border-white'} pb-0.5`}>
+                            <li
+                                key={index}
+                                className='mb-4'
+                                onClick={() => {
+                                    toggle && setToggle(false)
+                                }}
+                            >
+                                <Link
+                                    href={path}
+                                    className={`${
+                                        router.pathname === path && 'border-b-2 border-black dark:border-white'
+                                    } pb-0.5`}
+                                >
                                     {title}
                                 </Link>
                             </li>
@@ -81,7 +96,6 @@ const Navbar = () => {
                     </button>
                 </div>
             </nav>
-
         </div>
     )
 }

@@ -10,53 +10,57 @@ const CardSmallVertical = (props) => {
                 <img src={image} alt='card' className={'object-cover h-full w-full'} />
             </Link>
 
-                {date ? <h3 className={'text-sm font-bold text-purple-600 mb-3'}>{date}</h3> : ''}
+            {date ? <h3 className={'text-sm font-bold text-purple-600 mb-3'}>{date}</h3> : ''}
 
-                <Link href={''} className={'flex justify-between mb-3'}>
-                    <h1 className={'text-2xl leading-8 font-[600] line-clamp-1'}>{title}</h1>
-                    {link ? (
-                        <div className={'w-6'}>
-                            <ArrowUpRightIcon className={'h-6 w-6'} />
-                        </div>
-                    ) : (
-                        ''
-                    )}
-                </Link>
-                <p className={'text-base leading-6 text-[#667085] mb-6 line-clamp-2'}>{description}</p>
-                <div className={'flex flex-wrap gap-2'}>
-                    {one ? (
-                        <span className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}>
-                            {' '}
-                            {one}{' '}
-                        </span>
-                    ) : (
-                        ''
-                    )}
-                    {two ? (
-                        <span className={'bg-[#EEF4FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}>
-                            {' '}
-                            {two}{' '}
-                        </span>
-                    ) : (
-                        ''
-                    )}
-                    {three ? (
-                        <span className={'bg-[#FDF2FA] text-sm font-[500] py-0.5 px-3 rounded-2xl text-[#667085] h-[26px]'}>
-                            {' '}
-                            {three}{' '}
-                        </span>
-                    ) : (
-                        ''
-                    )}
-                    {four ? (
-                        <span className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600'}>
-                            {' '}
-                            {four}{' '}
-                        </span>
-                    ) : (
-                        ''
-                    )}
-                </div>
+            <Link href={''} className={'flex justify-between mb-3'}>
+                <h1 className={'text-2xl leading-8 font-[600] line-clamp-1'}>{title}</h1>
+                {link ? (
+                    <div className={'w-6'}>
+                        <ArrowUpRightIcon className={'h-6 w-6'} />
+                    </div>
+                ) : (
+                    ''
+                )}
+            </Link>
+            <p className={'text-base leading-6 text-[#667085] mb-6 line-clamp-2'}>{description}</p>
+            <div className={'flex flex-wrap gap-2'}>
+                {one ? (
+                    <span
+                        className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}
+                    >
+                        {' '}
+                        {one}{' '}
+                    </span>
+                ) : (
+                    ''
+                )}
+                {two ? (
+                    <span
+                        className={'bg-[#EEF4FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]'}
+                    >
+                        {' '}
+                        {two}{' '}
+                    </span>
+                ) : (
+                    ''
+                )}
+                {three ? (
+                    <span className={'bg-[#FDF2FA] text-sm font-[500] py-0.5 px-3 rounded-2xl text-[#667085] h-[26px]'}>
+                        {' '}
+                        {three}{' '}
+                    </span>
+                ) : (
+                    ''
+                )}
+                {four ? (
+                    <span className={'bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600'}>
+                        {' '}
+                        {four}{' '}
+                    </span>
+                ) : (
+                    ''
+                )}
+            </div>
         </div>
     )
 }
