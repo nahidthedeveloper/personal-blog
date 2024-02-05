@@ -85,8 +85,8 @@ const Projects = () => {
                                 index !== 2 ? (
                                     <CardVerticalTwo key={index} data={data} />
                                 ) : (
-                                    <div className="col-span-1 md:col-span-2">
-                                        <CardVerticalThree key={index} data={data} />
+                                    <div className="col-span-1 md:col-span-2" key={index}>
+                                        <CardVerticalThree data={data} />
                                     </div>
                                 ),
                             )}
