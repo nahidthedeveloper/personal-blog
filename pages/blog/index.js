@@ -87,23 +87,23 @@ const Blogs = () => {
                                 const arrMod = index % 6
                                 if (arrMod === 0) {
                                     return (
-                                        <div className='col-span-2 md:col-span-1'>
-                                            <CardVerticalOne key={index} data={el} />
+                                        <div className='col-span-2 md:col-span-1' key={index}>
+                                            <CardVerticalOne data={el} />
                                         </div>
                                     )
                                 } else if (arrMod === 1) {
                                     return (
                                         <>
-                                            <div className="grid gap-10 col-span-2 md:col-span-1">
-                                                <CardHorizontalOne key={index} data={el} />
-                                                <CardHorizontalOne key={index} data={el} />
+                                            <div className="grid gap-10 col-span-2 md:col-span-1" key={index}>
+                                                <CardHorizontalOne data={el} />
+                                                <CardHorizontalOne data={el} />
                                             </div>
                                         </>
                                     )
                                 } else if (arrMod === 2) {
                                     return (
-                                        <div className="col-span-2">
-                                            <CardHorizontalTwo key={index} data={el} />
+                                        <div className="col-span-2" key={index}>
+                                            <CardHorizontalTwo data={el} />
                                         </div>
                                     )
                                 }
