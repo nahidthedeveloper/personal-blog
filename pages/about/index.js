@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 
 const About = () => {
     const skill = [
@@ -51,7 +50,7 @@ const About = () => {
                 <div className={'px-8 lg:px-0'}>
                     <div className={'mt-16 overflow-hidden'}>
                         <img
-                            src="https://scontent.fjsr14-1.fna.fbcdn.net/v/t39.30808-6/362301815_1395788694315125_1512437240239899153_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=783fdb&_nc_eui2=AeGEwBOaGVBWg64qvAua3iN7SbgEqEZJqHZJuASoRkmodmGFVPfL9jhFQlhV1jk4ky-uc5vDGZfjYX7A8Inoi2fT&_nc_ohc=a57Vh4p5WH4AX-A6QpC&_nc_ht=scontent.fjsr14-1.fna&oh=00_AfB8lAY-9v1_EybgiVgxd-NOkIe5qJVwrA2ujhOlHIHOGw&oe=65C438D0"
+                            src="/IMG_6004.jpg"
                             alt='image'
                             className={'h-[300px] md:h-[556px] w-full object-cover'}
                         />

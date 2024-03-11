@@ -1,33 +1,40 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
+import moment from 'moment'
 
-const CardVerticalOne = ({ data }) => {
-    const { image, title, link, description } = data
+const CardVerticalOne = ({ blog }) => {
+    const { id, image, title, description, keyword, created_at } = blog
+    const separatedKeyword = keyword.split(',').map(item => item.trim())
+
+    const dateTime = moment(created_at)
+    const formattedDateTime = dateTime.format('dddd, D MMM YYYY')
+
     return (
         <div>
-            <Link href="" className="overflow-hidden w-full h-[240px] block mb-8">
+            <Link href={`/blog/${id}`} className="overflow-hidden w-full h-[240px] block mb-8">
                 <img src={image} alt="card" className="object-cover h-full w-full" />
             </Link>
 
-            <h3 className="text-sm font-bold text-purple-600 mb-3">02 Feb 2024</h3>
+            <h3 className="text-sm font-bold text-purple-600 mb-3">{formattedDateTime}</h3>
 
-            <Link href="" className="flex justify-between mb-3">
+            <Link href={`/blog/${id}`} className="flex justify-between mb-3">
                 <h1 className="text-2xl leading-8 font-[600] line-clamp-1">{title}</h1>
-                {link && (
-                    <div className="w-6">
-                        <ArrowUpRightIcon className="h-6 w-6" />
-                    </div>
-                )}
+                <div className="w-6">
+                    <ArrowUpRightIcon className="h-6 w-6" />
+                </div>
             </Link>
 
             <p className="text-base leading-6 text-[#667085] mb-6 line-clamp-2">{description}</p>
             <div className="flex flex-wrap gap-2">
-                <span
-                    className="bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]"
-                >
-                  Hello World
+                {separatedKeyword.map((item, index) => (
+                    <span
+                        key={index}
+                        className="bg-[#F9F5FF] text-sm font-[500] py-0.5 px-3 rounded-2xl text-purple-600 h-[26px]"
+                    >
+                    {item}
                 </span>
+                ))}
             </div>
         </div>
     )
