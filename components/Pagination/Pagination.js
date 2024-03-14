@@ -2,7 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon } from '@heroicons/react/20/solid'
 
-const Pagination = () => {
+const Pagination = ({ currentPage, setCurrentPage, postsPerPage, blogs }) => {
+    let pages = []
+    let totalPage = Math.ceil(blogs.count / postsPerPage)
+
+    for (let i = 1; i <= totalPage; i++) {
+        pages.push(i)
+    }
     return (
         <div>
             <div
@@ -10,24 +16,27 @@ const Pagination = () => {
                     'border-y md:border-0 md:border-t border-black dark:border-white py-[30px] flex justify-between items-center flex-col gap-7 md:flex-row'
                 }
             >
-                <Link href={''} className={'flex items-center'}>
+                <button disabled={!blogs.previous} onClick={() => setCurrentPage(currentPage - 1)}
+                        className={'flex items-center'}>
                     <ArrowSmallLeftIcon className={'h-7 w-7'} />
                     <span className={'ml-2'}>Previous</span>
-                </Link>
+                </button>
 
                 <div className={'flex flex-wrap gap-2'}>
-                    <Link href={''} className={'bg-black text-white dark:bg-white dark:text-black px-2 py-1 rounded'}>
-                        1
-                    </Link>
-                    <Link href={''} className={' px-2 py-1'}>
-                        2
-                    </Link>
+                    {pages.map((page, index) =>
+                        <button key={index}
+                                onClick={() => setCurrentPage(page)}
+                                className={`${currentPage === page && 'bg-black text-white dark:bg-white dark:text-black rounded'} px-3 py-1`}>
+                            {page}
+                        </button>,
+                    )}
                 </div>
 
-                <Link href={''} className={'flex items-center'}>
+                <button disabled={!blogs.next} onClick={() => setCurrentPage(currentPage + 1)}
+                        className={'flex items-center'}>
                     <span className={'mr-2'}>Next</span>
                     <ArrowSmallRightIcon className={'h-7 w-7'} />
-                </Link>
+                </button>
             </div>
         </div>
     )

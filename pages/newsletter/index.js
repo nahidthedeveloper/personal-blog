@@ -16,7 +16,6 @@ export async function getServerSideProps(context) {
 
 const Newsletter = (props) => {
     const { blogs } = props
-    console.log(blogs)
 
     return (
         <>
@@ -70,7 +69,7 @@ const Newsletter = (props) => {
                     <h2 className={'font-bold text-2xl mb-10'}>All blog posts</h2>
 
                     <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-8 mb-20'}>
-                        {blogs?.map((blog, index) => (
+                        {blogs.results?.map((blog, index) => (
                             <CardVerticalOne key={index} blog={blog} />
                         ))}
                     </div>

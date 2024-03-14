@@ -1,14 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
-import moment from 'moment'
+import { formattedDateTime } from '@/utils/formattedDateTime'
 
 const CardVerticalOne = ({ blog }) => {
     const { id, image, title, description, keyword, created_at } = blog
     const separatedKeyword = keyword.split(',').map(item => item.trim())
 
-    const dateTime = moment(created_at)
-    const formattedDateTime = dateTime.format('dddd, D MMM YYYY')
 
     return (
         <div>
@@ -16,7 +14,7 @@ const CardVerticalOne = ({ blog }) => {
                 <img src={image} alt="card" className="object-cover h-full w-full" />
             </Link>
 
-            <h3 className="text-sm font-bold text-purple-600 mb-3">{formattedDateTime}</h3>
+            <h3 className="text-sm font-bold text-purple-600 mb-3">{formattedDateTime(created_at)}</h3>
 
             <Link href={`/blog/${id}`} className="flex justify-between mb-3">
                 <h1 className="text-2xl leading-8 font-[600] line-clamp-1">{title}</h1>
@@ -25,7 +23,7 @@ const CardVerticalOne = ({ blog }) => {
                 </div>
             </Link>
 
-            <p className="text-base leading-6 text-[#667085] mb-6 line-clamp-2">{description}</p>
+            <p className="text-base leading-6 text-[#667085] mb-6 line-clamp-1">{description}</p>
             <div className="flex flex-wrap gap-2">
                 {separatedKeyword.map((item, index) => (
                     <span

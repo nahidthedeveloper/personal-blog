@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import axios from 'axios'
+import { formattedDateTime } from '@/utils/formattedDateTime'
 
 
 export async function getServerSideProps(context) {
@@ -16,7 +17,7 @@ export async function getServerSideProps(context) {
 }
 
 const SingleBlog = (props) => {
-    const { blogPost } = props
+    const { blogPost } = props.results
 
     return (
         <>
@@ -26,7 +27,7 @@ const SingleBlog = (props) => {
             <div className={'grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-8 my-[30px] px-8'}>
                 <div className={'col-span-1 md:col-span-3 lg:col-span-2'}>
                     <div>
-                        <h3 className={'text-sm font-bold text-purple-600'}> Sunday , 1 Jan 2023 </h3>
+                        <h3 className={'text-sm font-bold text-purple-600'}> {formattedDateTime(blogPost.created_at)} </h3>
                         <h1 className={'text-4xl leading-8 font-bold my-8'}>
                             {blogPost.title}
                         </h1>
