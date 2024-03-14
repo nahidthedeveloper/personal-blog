@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Pagination from '@/components/Pagination/Pagination'
 import Head from 'next/head'
 import CardHorizontalOne from '@/components/Card/CardHorizontalOne'
@@ -18,11 +18,6 @@ export async function getServerSideProps(context) {
 
 const Blogs = (props) => {
     const { blogs } = props
-
-    // useEffect(() => {
-    //
-    // }, [])
-
 
     return (<>
         <Head>
@@ -49,7 +44,9 @@ const Blogs = (props) => {
                 <section className={'my-12'}>
                     <h2 className={'font-bold text-2xl my-16'}>All blog posts</h2>
                     <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'}>
-                        {blogs?.map((blog, index) => (<CardVerticalOne key={index} blog={blog} />))}
+                        {blogs?.map((blog, index) =>(
+                            <CardVerticalOne key={index} blog={blog} />
+                        ))}
                     </div>
                 </section>
 

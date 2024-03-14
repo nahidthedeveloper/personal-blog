@@ -2,38 +2,21 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import CardVerticalOne from '@/components/Card/CardVerticalOne'
+import axios from 'axios'
 
-const Newsletter = () => {
-    const cardData = [
-        {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
-            date: 'Sunday , 1 Jan 2023',
-            title: 'Bill Walsh leadership lessons',
-            description: 'Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?',
-            one: 'Leadership',
-            two: 'Management',
-            three: 'Presentation',
+export async function getServerSideProps(context) {
+    const blogs = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/blogs/`)
+
+    return {
+        props: {
+            blogs: blogs.data,
         },
-        {
-            image: 'https://media.architecturaldigest.com/photos/57c7003fdc03716f7c8289dd/16:9/w_1920,c_limit/IMG%20Worlds%20of%20Adventure%20-%201.jpg',
-            date: 'Sunday , 2 Jan 2023',
-            link: '#',
-            title: 'PM mental models',
-            description: 'Mental models are simple expressions of complex processes or relationships.',
-            one: 'Product',
-            two: 'Research',
-            three: 'Frameworks',
-        },
-        {
-            image: 'https://miro.medium.com/v2/resize:fit:1358/1*gXgR2uZK6UKpG72tYKXsMw.jpeg',
-            date: 'Monday , 3 Jan 2023',
-            title: 'What is Wireframing?',
-            description: 'Introduction to Wireframing and its Principles. Learn from the best in the industry.',
-            one: 'Design',
-            two: 'Research',
-            three: 'Presentation',
-        },
-    ]
+    }
+}
+
+const Newsletter = (props) => {
+    const { blogs } = props
+    console.log(blogs)
 
     return (
         <>
@@ -87,8 +70,8 @@ const Newsletter = () => {
                     <h2 className={'font-bold text-2xl mb-10'}>All blog posts</h2>
 
                     <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 md:gap-8 mb-20'}>
-                        {cardData.map((date, index) => (
-                            <CardVerticalOne key={index} data={date} />
+                        {blogs?.map((blog, index) => (
+                            <CardVerticalOne key={index} blog={blog} />
                         ))}
                     </div>
 

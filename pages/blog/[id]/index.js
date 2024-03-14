@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import CardVerticalOne from '@/components/Card/CardVerticalOne'
 import Link from 'next/link'
 import axios from 'axios'
 
