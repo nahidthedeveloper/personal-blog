@@ -16,13 +16,19 @@ export async function getServerSideProps(context) {
     }
 }
 
+
 const Blogs = (props) => {
     const { blogs } = props
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(9)
 
-    return (
-        <>
+    const handlePagination = async (page) => {
+        setCurrentPage(page)
+        const blogs = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/blogs/?page=${page}`)
+        console.log(blogs)
+    }
+
+    return (<>
             <Head>
                 <title>Blog | Personal Blog</title>
             </Head>
@@ -81,20 +87,17 @@ const Blogs = (props) => {
                         {/*    </div>*/}
                         {/*</div>*/}
                         <div className={'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'}>
-                            {blogs.results?.map((blog, index) => (
-                                <CardVerticalOne key={index} blog={blog} />
-                            ))}
+                            {blogs.results?.map((blog, index) => (<CardVerticalOne key={index} blog={blog} />))}
                         </div>
                     </section>
 
                     <section>
-                        <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage}
-                                    postsPerPage={postsPerPage} blogs={blogs} />
+                        <Pagination currentPage={currentPage} postsPerPage={postsPerPage} blogs={blogs}
+                                    handlePagination={handlePagination} />
                     </section>
                 </div>
             </div>
-        </>
-    )
+        </>)
 }
 
 export default Blogs

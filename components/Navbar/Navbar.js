@@ -55,7 +55,7 @@ const Navbar = () => {
                     toggle ? 'block' : 'hidden'
                 } bg-white text-black dark:bg-gray-900 dark:text-white w-full h-screen fixed top-0`}
             >
-                <div className='h-screen flex items-center justify-center gap-6'>
+                <div className='h-screen flex items-center justify-center mr-6 pb-20'>
                     <ul className={'text-center'}>
                         <li className={'mb-[54px]'}>
                             <Link
@@ -91,7 +91,7 @@ const Navbar = () => {
                         </li>
                     </ul>
 
-                    <button className={'absolute bottom-20'} onClick={() => setToggle(!toggle)}>
+                    <button className={'absolute bottom-24'} onClick={() => setToggle(!toggle)}>
                         {toggle ? <XMarkIcon className={'h-8 w-8'} /> : ''}
                     </button>
                 </div>
