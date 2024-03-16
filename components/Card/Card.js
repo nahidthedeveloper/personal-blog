@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 import { formattedDateTime } from '@/utils/formattedDateTime'
 
-const CardVerticalOne = ({ blog }) => {
+const Card = ({ blog }) => {
     const { id, image, title, description, keyword, created_at } = blog
     const separatedKeyword = keyword.split(',').map(item => item.trim())
 
@@ -23,7 +23,8 @@ const CardVerticalOne = ({ blog }) => {
                 </div>
             </Link>
 
-            <p className="text-base leading-6 text-[#667085] mb-6 line-clamp-1">{description}</p>
+            <div className="text-base leading-6 text-[#667085] mb-6 line-clamp-1"
+                 dangerouslySetInnerHTML={{ __html: description }}></div>
             <div className="flex flex-wrap gap-2">
                 {separatedKeyword.map((item, index) => (
                     <span
@@ -38,4 +39,4 @@ const CardVerticalOne = ({ blog }) => {
     )
 }
 
-export default CardVerticalOne
+export default Card

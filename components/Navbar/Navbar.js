@@ -11,9 +11,7 @@ const Navbar = () => {
     const items = [
         { title: 'Home', path: '/' },
         { title: 'Blog', path: '/blog' },
-        { title: 'Projects', path: '/projects' },
         { title: 'About', path: '/about' },
-        { title: 'Newsletter', path: '/newsletter' },
     ]
 
     return (

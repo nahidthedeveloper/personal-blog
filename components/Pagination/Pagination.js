@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
 import { ArrowSmallLeftIcon, ArrowSmallRightIcon } from '@heroicons/react/20/solid'
 
 const Pagination = ({ currentPage, setCurrentPage, postsPerPage, blogs, handlePagination }) => {
     let pages = []
-    let totalPage = Math.ceil(blogs.count / postsPerPage)
+    let totalPage = Math.ceil(blogs?.count / postsPerPage)
     for (let i = 1; i <= totalPage; i++) pages.push(i)
 
 
@@ -15,7 +14,7 @@ const Pagination = ({ currentPage, setCurrentPage, postsPerPage, blogs, handlePa
                     'border-y md:border-0 md:border-t border-black dark:border-white py-[30px] flex justify-between items-center flex-col gap-7 md:flex-row'
                 }
             >
-                <button disabled={!blogs.previous}
+                <button disabled={!blogs?.previous}
                         onClick={() => {
                             handlePagination(currentPage - 1)
                             setCurrentPage(currentPage - 1)
@@ -38,7 +37,7 @@ const Pagination = ({ currentPage, setCurrentPage, postsPerPage, blogs, handlePa
                     )}
                 </div>
 
-                <button disabled={!blogs.next} onClick={() => {
+                <button disabled={!blogs?.next} onClick={() => {
                     handlePagination(currentPage + 1)
                     setCurrentPage(currentPage + 1)
                 }}
