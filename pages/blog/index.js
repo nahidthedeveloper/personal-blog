@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Card from '@/components/Card/Card'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import { useSearchParams } from 'next/navigation'
 
 export async function getServerSideProps(context) {
     try {
@@ -27,11 +26,10 @@ export async function getServerSideProps(context) {
 
 const Blogs = (props) => {
     const { blogs } = props
-    const params = useSearchParams()
-    const searchParam = params.get('search')
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage, setPostsPerPage] = useState(9)
-    const [searchValue, setSearchValue] = useState(searchParam ?? '')
+    const [searchValue, setSearchValue] = useState( '')
+    const [orderingValue, setOrderingValue] = useState('')
 
     const router = useRouter()
 
@@ -39,14 +37,14 @@ const Blogs = (props) => {
         await router.push(`${process.env.NEXT_PUBLIC_CLIENT_URL}/blog?page=${page}`)
 
     }
-
     const searchHandler = useCallback(async (e) => {
         await setSearchValue(e.target.value)
-        await router.push(`${process.env.NEXT_PUBLIC_CLIENT_URL}/blog?search=${e.target.value}`)
+        await router.push(`${process.env.NEXT_PUBLIC_CLIENT_URL}/blog?search=${e.target.value}&ordering=${orderingValue}`)
     }, [searchValue, router])
 
     const orderHandler = useCallback(async (e) => {
-        await router.push(`${process.env.NEXT_PUBLIC_CLIENT_URL}/blog?ordering=${e.target.value}`)
+        await setOrderingValue(e.target.value)
+        await router.push(`${process.env.NEXT_PUBLIC_CLIENT_URL}/blog?search=${searchValue}&ordering=${e.target.value}`)
     }, [router])
 
 
