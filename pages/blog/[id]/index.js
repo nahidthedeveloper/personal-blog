@@ -38,11 +38,11 @@ const SingleBlog = (props) => {
                     <div className={'col-span-1 md:col-span-5'}>
                         <div>
                             <h3 className={'text-sm font-bold text-purple-600'}> {formattedDateTime(blogPost.created_at)} </h3>
-                            <h1 className={'text-4xl leading-8 font-bold my-8'}>
+                            <h1 className={'text-2xl md:text-4xl leading-8 font-bold my-8'}>
                                 {blogPost.title}
                             </h1>
 
-                            <div className={'h-[426px] w-full overflow-hidden mb-8'}>
+                            <div className={'h-[226px] md:h-[426px] w-full overflow-hidden mb-8'}>
                                 <img
                                     src={blogPost.image}
                                     className="object-cover h-full w-full"
